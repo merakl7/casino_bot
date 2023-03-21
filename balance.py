@@ -1,4 +1,4 @@
 import asyncio
 import time
 
-balance = 1000
+balance = 10000
