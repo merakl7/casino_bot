@@ -8,7 +8,7 @@ import sqlite3
 
 bot = Bot(token)
 dp = Dispatcher(bot)
-
+a = "test"
 
 async def on_startup(_):
     print("Запуск успешен")
