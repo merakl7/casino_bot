@@ -107,7 +107,7 @@ async def cards_command(message: types.message):
                                  animation="https://vk.com/doc146713895_657548202?hash=nxqA6qNAlvL4lU6XfJ4iRjFU5CSH7DQhUoH1QYbWPZg&dl=Xm2IAjLQPvmvm1e7viJMzEdWGyRkeOyjfUASZt0ZvB8&wnd=1&module=im",
                                  caption='\n'.join(cards))
         if "Золотая легендарная карта" in cards:
-            await message.reply("Ваша мать продана на черном рынке") #ФАКТ ФАКТ ФАКТ
+            await message.answer("Ваша мать продана на черном рынке") #ФАКТ ФАКТ ФАКТ
     else:
         await message.reply("нет денек") #здесь надо написано красиво что вы нищий и заплатите шекелей нам
 
