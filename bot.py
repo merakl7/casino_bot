@@ -1,6 +1,9 @@
 import asyncio
 from aiogram import Bot, Dispatcher, executor, types
 from config import token
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.dispatcher.filters import Text
 import random
 import time
 import sqlite3
@@ -43,7 +46,6 @@ async def start_command(message: types.message):
 
 @dp.message_handler(commands="cards")
 async def cards_command(message: types.message):
-    global cards
     cards = []
     common = "Обычная"
     rare = "Редкая"
