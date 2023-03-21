@@ -79,7 +79,7 @@ async def cards_command(message: types.message):
                 [lega] = cur.execute("select anekdot from joke_hs where id_anek = ?", (anekdot,))
                 lega = lega[0]
                 await message.answer(lega)
-        print(cards)
+        #print(cards)
         for i in range(len(cards)): #получаем список из 5 карт
             gold_test = random.randint(1, 1000) #задаем тест на попытку получить золотую
             if cards[i] == "Обычная" and gold_test > 960: #проверяем есть ли обычная карта в списке и если есть,пытаемся ролять золотую
@@ -102,6 +102,7 @@ async def cards_command(message: types.message):
         if cards == ['Обычная', 'Обычная', 'Обычная', 'Обычная', 'Обычная']: #защита бен броуда
             cards = ['Обычная', 'Обычная', 'Обычная', 'Обычная', 'Редкая']
         conn.commit()
+        print(cards)
         await bot.send_animation(message.chat.id,
                                  animation="https://vk.com/doc146713895_657548202?hash=nxqA6qNAlvL4lU6XfJ4iRjFU5CSH7DQhUoH1QYbWPZg&dl=Xm2IAjLQPvmvm1e7viJMzEdWGyRkeOyjfUASZt0ZvB8&wnd=1&module=im",
                                  caption='\n'.join(cards))
